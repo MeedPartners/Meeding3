@@ -77,12 +77,31 @@ WSGI_APPLICATION = 'uploads.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#  up on amazon         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#  up on amazon     'NAME': 'Compliment',
+#  up on amazon         'USER': 'SuperMeed',
+#  up on amazon         'PASSWORD': 'Desmond66',
+#  up on amazon        'HOST': 'meedpartnersprototype.c0q3kykleoeo.us-east-2.rds.amazonaws.com',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Pythia',
+        'USER': 'postgres',
+        'PASSWORD': 'jasper',
+        'HOST': 'localhost',        
+        'PORT': '5432',
     }
 }
+
+# the old one was this...sqllite
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 # Password validation
