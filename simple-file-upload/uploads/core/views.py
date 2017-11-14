@@ -8,7 +8,10 @@ from uploads.core.forms import DocumentForm
 
 def home(request):
     documents = Document.objects.all()
-    return render(request, 'core/home.html', { 'documents': documents })
+    doc_count = documents.count()
+    doc_latest = documents.latest('uploaded_at')
+    thedate = doc_latest.uploaded_at
+    return render(request, 'core/home.html', { 'thelatest':thedate ,'doccount':doc_count ,'documents': documents })
 
 
 def simple_upload(request):
