@@ -9,13 +9,7 @@
     </li>
   </ul>
 
-  <p> <h2>Some interesting facts about the data in our table are: </h2> <p>
-  <li> There are a total of {{ doccount}} objects in our table </li>
-<br>
-  <li> The most recent file was uploaded at {{ thelatest}} </li>
-<br>
-<li>________________________________________________________</li>
-  <h3>Uploaded files:</h3>
+  <p>Uploaded files:</p>
   <ul>
     {% for obj in documents %}
       <li>
